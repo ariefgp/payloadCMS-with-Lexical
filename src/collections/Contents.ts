@@ -8,9 +8,7 @@ const Contents: CollectionConfig = {
   fields: [
     {
       name: 'content',
-      type: 'richText',
-      // Pass the Lexical editor here and override base settings as necessary
-      editor: lexicalEditor({})
+      type: 'richText'
     }
   ]
 }
