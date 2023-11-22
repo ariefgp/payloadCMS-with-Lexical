@@ -9,13 +9,14 @@ import { buildConfig } from 'payload/config'
 import Users from './collections/Users'
 import Contents from './collections/Contents'
 import ContentsNative from './collections/ContentsNative'
+import { lexicalEditor } from '@payloadcms/richtext-lexical'
 
 export default buildConfig({
   admin: {
     user: Users.slug,
     bundler: webpackBundler(),
   },
-  editor: slateEditor({}),
+  editor: lexicalEditor({}),
   collections: [Users, Contents, ContentsNative],
   typescript: {
     outputFile: path.resolve(__dirname, 'payload-types.ts'),
